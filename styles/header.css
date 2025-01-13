@@ -4,23 +4,27 @@ header {
 
 header .container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 32px;
+    padding-inline: 16px;
 }
 
 #profile {
     display: flex;
+    flex-wrap: wrap;
     /* align-items: center; */
-    gap: 32px;
+    gap: 16px;
 }
 
 #profile > div {
-    max-width: 384px;
+    max-width: 296px;
 }
 
 #profile img {
-    width: 176px;
-    height: 176px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -46,4 +50,24 @@ header .container {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+#info span {
+    font: var(--text-md);
+}
+
+@media (width >= 43.75em) {
+    #profile > div {
+        max-width: 384px;
+    }
+
+    #profile img {
+        width: 176px;
+        height: 176px;
+    }
+    
+
+    #profile {
+        gap: 32px;
+    }
 }

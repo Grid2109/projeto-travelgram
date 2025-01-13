@@ -1,0 +1,36 @@
+.px-lg {
+  padding-inline: var(--px-lg);
+}
+
+.desktop-only {
+  display: none;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+    --max-width: 360px;
+    width: min(
+      var(--max-width),
+      100% - var(--px-lg) * 2
+    ); /*Função do css q Pega o mínimo entre dois*/
+    margin-inline: auto;
+  }
+
+  @media (width >= 43.75em) {
+    .container {
+      --max-width: 43.75rem; /* Novo breakpoint para telas médias */
+    }
+  }
+
+  @media (width >= 64em) {
+    .container {
+      --max-width: 80rem;
+    }
+
+    .desktop-only {
+      display: initial;
+    }
+  }

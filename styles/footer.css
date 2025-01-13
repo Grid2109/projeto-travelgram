@@ -1,11 +1,28 @@
 footer {
     display: flex;
-    padding-block: 24px;
-    gap: 24px;
-
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    text-align: center;
+    padding-block: 16px;
     font: 14px/150% var(--font-family);
 }
 
-footer span:nth-child(1){
-    margin-right: auto;
+footer span:nth-child(1) {
+    flex-basis: 100%;
+    /* margin-right: 0;
+    text-align: center; */
+}
+
+@media (min-width: 43.75em) {
+    footer .container {
+        display: flex;
+        padding-block: 24px;
+        gap: 24px;
+    }
+
+    footer span:nth-child(1) {
+        flex-basis: auto;
+        margin-right: auto;
+    }
 }
